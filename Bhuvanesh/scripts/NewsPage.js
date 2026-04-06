@@ -29,4 +29,25 @@ $(document).ready(function () {
       console.log(err);
     },
   });
+  checkAccess();
+  function checkAccess() {
+    token = localStorage.getItem("token");
+    if (!token) {
+      window.location.href = "./login.html";
+    }
+    fetch("https://dummyjson.com/auth/me", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then((res) => {
+        if (!res.ok) {
+          logout();
+          return;
+        }
+        return res.json();
+      })
+      .catch((err) => {
+        console.error(err);
+        console.log(err);
+      });
+  }
 });

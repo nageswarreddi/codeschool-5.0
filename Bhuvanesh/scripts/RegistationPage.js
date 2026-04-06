@@ -34,7 +34,7 @@ $(document).ready(function () {
         EmailValidate(Email, "Email") &&
         PanValidate(Pan, "PanNo") &&
         check(password, confirm) && 
-        Dob(dob)
+        Dob(dob,"")
       )
     ) {
       console.log("not success");
