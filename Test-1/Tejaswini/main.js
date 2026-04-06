@@ -32,7 +32,8 @@ $(document).ready(function () {
   });
 });
 
-const apiKey = "6979dc3ca9324bf689616d16c4169c53";
+// const apiKey = "6979dc3ca9324bf689616d16c4169c53";
+const apiKey = "4158e9adcab84658862b0be7eaae8af4";
 
 function fetchNews() {
   $.ajax({
